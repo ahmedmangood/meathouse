@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react";
 import Image from "next/image";
+
+const WHATSAPP_LINK = `https://wa.me/201556600033?text=${encodeURIComponent("مرحباً، أريد الاستفسار عن منتجاتكم")}`;
 
 const navLinks = [
   { href: "#home", label: "الرئيسية" },
@@ -79,13 +81,16 @@ export default function Navbar() {
               </motion.a>
             ))}
             <motion.a
-              href="#contact"
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.7, duration: 0.4 }}
-              className="mr-4 px-6 py-2 bg-gradient-to-l from-crimson to-crimson-dark text-white text-sm font-semibold rounded-full hover:shadow-lg hover:shadow-crimson/30 transition-all duration-300"
+              className="mr-4 px-6 py-2 bg-gradient-to-l from-green-500 to-green-600 text-white text-sm font-semibold rounded-full hover:shadow-lg hover:shadow-green-500/20 transition-all duration-300 flex items-center gap-2"
             >
-              اطلب الآن
+              <MessageCircle className="w-4 h-4" />
+              تواصل واتساب
             </motion.a>
           </div>
 
@@ -124,14 +129,17 @@ export default function Navbar() {
                 </motion.a>
               ))}
               <motion.a
-                href="#contact"
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
                 initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.35 }}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block text-center mt-4 px-6 py-3 bg-gradient-to-l from-crimson to-crimson-dark text-white font-semibold rounded-full"
+                className="block text-center mt-4 px-6 py-3 bg-gradient-to-l from-green-500 to-green-600 text-white font-semibold rounded-full flex items-center justify-center gap-2"
               >
-                اطلب الآن
+                <MessageCircle className="w-5 h-5" />
+                تواصل واتساب
               </motion.a>
             </div>
           </motion.div>

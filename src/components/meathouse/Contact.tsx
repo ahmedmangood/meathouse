@@ -42,7 +42,7 @@ const contactInfo = [
 const socialLinks = [
   { icon: Instagram, label: "انستقرام", href: "#" },
   { icon: Twitter, label: "تويتر", href: "#" },
-  { icon: MessageCircle, label: "واتساب", href: "#" },
+  { icon: MessageCircle, label: "واتساب", href: `https://wa.me/201556600033?text=${encodeURIComponent("مرحباً، أريد الاستفسار عن منتجاتكم")}` },
 ];
 
 export default function Contact() {

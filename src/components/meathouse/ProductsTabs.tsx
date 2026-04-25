@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ShoppingBag, Flame, Sparkles, Crown, Plus } from "lucide-react";
+import { ShoppingBag, Flame, Sparkles, Crown, MessageCircle } from "lucide-react";
 import Image from "next/image";
 
 interface Product {
@@ -108,6 +108,15 @@ const cardGradients = [
 
 function formatPrice(price: number): string {
   return price.toFixed(2);
+}
+
+const WHATSAPP_NUMBER = "201556600033";
+
+function getWhatsAppLink(productName: string): string {
+  const message = encodeURIComponent(
+    `مرحباً، أريد طلب: ${productName}`
+  );
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
 }
 
 export default function ProductsTabs() {
@@ -310,13 +319,17 @@ export default function ProductsTabs() {
                       <span className="text-xs text-gray-500">ر.س</span>
                     </div>
 
-                    <motion.button
+                    <motion.a
+                      href={getWhatsAppLink(product.name)}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
-                      className={`w-10 h-10 rounded-xl bg-gradient-to-br ${activeCategory.gradient} flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300`}
+                      className={`w-10 h-10 rounded-xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-white shadow-lg hover:shadow-xl hover:shadow-green-500/20 transition-all duration-300`}
+                      title="اطلب عبر واتساب"
                     >
-                      <Plus className="w-5 h-5" />
-                    </motion.button>
+                      <MessageCircle className="w-5 h-5" />
+                    </motion.a>
                   </div>
                 </div>
               </motion.div>

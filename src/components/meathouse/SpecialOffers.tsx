@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Flame, Timer } from "lucide-react";
+import { Flame, Timer, MessageCircle } from "lucide-react";
 import Image from "next/image";
 
 const offers = [
@@ -41,6 +41,8 @@ const stats = [
   { value: "+100", label: "منتج متنوع" },
   { value: "4.9", label: "تقييم العملاء" },
 ];
+
+const WHATSAPP_NUMBER = "201556600033";
 
 export default function SpecialOffers() {
   const ref = useRef(null);
@@ -145,13 +147,17 @@ export default function SpecialOffers() {
                   </span>
                 </div>
 
-                <motion.button
+                <motion.a
+                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`مرحباً، أريد طلب: ${offer.title}`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full mt-5 py-3.5 bg-gradient-to-l from-gold to-gold-dark text-charcoal font-bold rounded-xl hover:shadow-lg hover:shadow-gold/20 transition-all duration-300"
+                  className="w-full mt-5 py-3.5 bg-gradient-to-l from-green-500 to-green-600 text-white font-bold rounded-xl hover:shadow-lg hover:shadow-green-500/20 transition-all duration-300 flex items-center justify-center gap-2"
                 >
-                  اطلب الآن
-                </motion.button>
+                  <MessageCircle className="w-5 h-5" />
+                  اطلب عبر واتساب
+                </motion.a>
               </div>
             </motion.div>
           ))}
