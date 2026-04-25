@@ -215,7 +215,7 @@ export default function ProductsSlider() {
                         {product.price}
                       </span>
                       <span className="text-sm text-gray-500">
-                        ر.س / كجم
+                        ج.م / كجم
                       </span>
                     </div>
                     <span className="text-sm text-gray-500 line-through">

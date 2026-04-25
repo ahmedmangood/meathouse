@@ -297,7 +297,7 @@ export default function ProductsTabs() {
                   {/* Price tag */}
                   <div className="absolute top-3 left-3">
                     <span className="px-2.5 py-1 rounded-lg text-xs font-black text-crimson-light bg-black/60 backdrop-blur-sm">
-                      {formatPrice(product.price)} ر.س
+                      {formatPrice(product.price)} ج.م
                     </span>
                   </div>
                 </div>
@@ -316,7 +316,7 @@ export default function ProductsTabs() {
                       <span className="text-xl font-black text-crimson-light">
                         {formatPrice(product.price)}
                       </span>
-                      <span className="text-xs text-gray-500">ر.س</span>
+                      <span className="text-xs text-gray-500">ج.م</span>
                     </div>
 
                     <motion.a

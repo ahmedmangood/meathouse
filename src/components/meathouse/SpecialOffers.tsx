@@ -12,7 +12,7 @@ const offers = [
     description: "5 كجم لحوم ممتازة + 2 كجم كباب + توابل مجانية",
     originalPrice: "550",
     price: "399",
-    tag: "وفر 150 ر.س",
+    tag: "وفر 150 ج.م",
     tagColor: "from-crimson to-crimson-dark",
   },
   {
@@ -21,7 +21,7 @@ const offers = [
     description: "3 كجم ضلع غنم + 2 كجم رibs + صوص باربيكيو",
     originalPrice: "420",
     price: "299",
-    tag: "وفر 121 ر.س",
+    tag: "وفر 121 ج.م",
     tagColor: "from-gold to-gold-dark",
   },
   {
@@ -140,7 +140,7 @@ export default function SpecialOffers() {
                     <span className="text-3xl font-black text-crimson-light">
                       {offer.price}
                     </span>
-                    <span className="text-sm text-gray-500">ر.س</span>
+                    <span className="text-sm text-gray-500">ج.م</span>
                   </div>
                   <span className="text-lg text-gray-500 line-through">
                     {offer.originalPrice}
