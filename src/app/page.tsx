@@ -3,7 +3,7 @@
 import Navbar from "@/components/meathouse/Navbar";
 import HeroSlider from "@/components/meathouse/HeroSlider";
 import Features from "@/components/meathouse/Features";
-import ProductsSlider from "@/components/meathouse/ProductsSlider";
+import ProductsTabs from "@/components/meathouse/ProductsTabs";
 import SpecialOffers from "@/components/meathouse/SpecialOffers";
 import About from "@/components/meathouse/About";
 import Testimonials from "@/components/meathouse/Testimonials";
@@ -16,7 +16,7 @@ export default function Home() {
       <Navbar />
       <HeroSlider />
       <Features />
-      <ProductsSlider />
+      <ProductsTabs />
       <SpecialOffers />
       <About />
       <Testimonials />
