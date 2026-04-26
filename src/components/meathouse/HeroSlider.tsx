@@ -16,9 +16,9 @@ const slides = [
   },
   {
     image: "/images/hero2.png",
-    title: "ذبح على الشريعة",
-    subtitle: "لحوم حلال مضمونة",
-    description: "نلتزم بأعلى معايير الذبح الشرعي لضمان الحلال",
+    title: "قطع مختارة بعناية",
+    subtitle: "نلتزم بجودة القطع المختارة",
+    description: "كل قطعة تمر بفحص دقيق لضمان أعلى معايير الجودة والنضارة",
     cta: "اعرف المزيد",
     ctaLink: "#about",
   },
@@ -180,7 +180,7 @@ export default function HeroSlider() {
       </div>
 
       {/* Navigation Arrows */}
-      <button
+      {/* <button
         onClick={nextSlide}
         className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300"
       >
@@ -191,7 +191,7 @@ export default function HeroSlider() {
         className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300"
       >
         <ChevronRight size={24} />
-      </button>
+      </button> */}
 
       {/* Slide Indicators */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">

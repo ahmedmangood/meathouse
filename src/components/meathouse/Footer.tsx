@@ -11,6 +11,7 @@ import {
   MessageCircle,
   ChevronUp,
 } from "lucide-react";
+import Link from "next/link";
 
 const quickLinks = [
   { label: "الرئيسية", href: "#home" },
@@ -20,22 +21,23 @@ const quickLinks = [
   { label: "اتصل بنا", href: "#contact" },
 ];
 
-const categoryLinks = [
-  "لحوم بقرية",
-  "لحوم غنم",
-  "دواجن طازجة",
-  "أسماك",
-  "كباب و مشويات",
-  "مقبلات و توابل",
-];
+const categoryLinks = ["جاهز للتسوية", "الكندوز", "حجز مسبق"];
 
 const socialLinks = [
-  { icon: Instagram, label: "انستقرام", href: "#" },
-  { icon: Twitter, label: "تويتر (X)", href: "#" },
   {
-    icon: MessageCircle,
+    icon: "/icons/instagram.svg",
+    label: "انستقرام",
+    href: "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fmeathouse.eg%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExcm1qOU1WY0VzR1JJWXZSUHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR48nZn5ivpuiI80mdV3pmQd-tjbcFV5-g25WzRC48yyISj9Hw9c9azP4mbVOg_aem_v_WNH3ziPGRVW1NHcjbwtQ&h=AT5vf_zfKfXt_PUwPni-aRRlTkoFJTabtGbD5AJdgssy09TpgpIFZZKNSh_pKKCXFVyoeYtSni-3pjYlV5jDyJ1m54ncKWOkLxCVfgoDXFGE35ODIR0WG6tGjLqCapdzsRuzvP_83V6RcX5rz4dE",
+  },
+  {
+    icon: "/icons/tiktok.svg",
+    label: "تيك توك",
+    href: "https://l.facebook.com/l.php?u=https%3A%2F%2Ftiktok.com%2F%40meathouse.eg%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExcm1qOU1WY0VzR1JJWXZSUHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR7CgYd3CatTLlipExeDnCsYCJqMqU3K8ocbanafAXk8nDv3LurzhA2CWPJ0eA_aem_1qmBN6-14qNAeB7bcUcRBg&h=AT6g1cJnNpR-D3867YFj1Wb16eB14j7i-ZEiKpq3xyzJ25TVor_RN52fw6mPBL4o-vhlh7itcsIAV-n8UtC1s6dU_YByH2G9YfX7B0RNbE42kjS_-zHnIJamE2JabR5pGPzv3TtWpYLo9JWl5xUT",
+  },
+  {
+    icon: "/icons/whatsapp.svg",
     label: "واتساب",
-    href: `https://wa.me/201556600033?text=${encodeURIComponent("مرحباً، أريد الاستفسار")}`,
+    href: `https://wa.me/201556600033?text=${encodeURIComponent("مرحباً، أريد الاستفسار عن منتجاتكم")}`,
   },
 ];
 
@@ -83,22 +85,28 @@ export default function Footer() {
             {/* Contact info */}
             <div className="space-y-3">
               <a
-                href="tel:+966XXXXXXXX"
+                href="tel:+201556600033"
                 className="flex items-center gap-2 text-sm text-gray-400 hover:text-gold transition-colors duration-300"
               >
                 <Phone className="w-4 h-4" />
-                <span dir="ltr">966-11-XXX-XXXX</span>
+                <span dir="ltr">+20 155 660 0033</span>
               </a>
               <a
-                href="mailto:info@meathouse.sa"
+                href="mailto:info@meathouse.shop"
                 className="flex items-center gap-2 text-sm text-gray-400 hover:text-gold transition-colors duration-300"
               >
                 <Mail className="w-4 h-4" />
-                <span dir="ltr">info@meathouse.sa</span>
+                <span dir="ltr">info@meathouse.shop</span>
               </a>
               <div className="flex items-start gap-2 text-sm text-gray-400">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                <span>شارع الملك فهد، حي العليا، الرياض</span>
+                <Link
+                  href="https://maps.app.goo.gl/bvasBjTrDfuye4SG7"
+                  target="_blank"
+                >
+                  دله_شارع مدرسة الزراعة أمام أبراج القضاة بجوار هايبر الأبرار ,
+                  Faiyum, Egypt, 63511
+                </Link>
               </div>
             </div>
           </motion.div>
@@ -170,27 +178,15 @@ export default function Footer() {
                     href={social.href}
                     className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-crimson hover:border-crimson transition-all duration-300"
                   >
-                    <Icon className="w-5 h-5" />
+                    <Image
+                      src={Icon}
+                      alt={social.label}
+                      width={20}
+                      height={20}
+                    />
                   </a>
                 );
               })}
-            </div>
-
-            {/* Newsletter mini form */}
-            <div>
-              <h4 className="text-white font-semibold text-sm mb-3">
-                النشرة البريدية
-              </h4>
-              <div className="flex gap-2">
-                <input
-                  type="email"
-                  placeholder="بريدك الإلكتروني"
-                  className="flex-1 px-4 py-2.5 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-600 text-sm focus:outline-none focus:border-crimson/50 transition-all duration-300"
-                />
-                <button className="px-4 py-2.5 bg-crimson text-white rounded-xl hover:bg-crimson-light transition-colors duration-300 text-sm font-semibold shrink-0">
-                  اشترك
-                </button>
-              </div>
             </div>
           </motion.div>
         </div>

@@ -1,29 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  MapPin,
-  Phone,
-  Clock,
-  Mail,
-  Send,
-  Instagram,
-  Twitter,
-  MessageCircle,
-} from "lucide-react";
+import { MapPin, Phone, Clock, Mail, Send } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 const contactInfo = [
   {
     icon: MapPin,
     title: "العنوان",
-    details: "شارع الملك فهد، حي العليا، الرياض",
-    lines: ["الرياض، المملكة العربية السعودية"],
+    dirction: "https://maps.app.goo.gl/bvasBjTrDfuye4SG7",
+    details:
+      "دله_شارع مدرسة الزراعة أمام أبراج القضاة بجوار هايبر الأبرار , Faiyum, Egypt, 63511",
+    lines: ["الفيوم, مصر"],
   },
   {
     icon: Phone,
     title: "الهاتف",
-    details: "966-11-XXX-XXXX",
-    lines: ["واتساب: 966-50-XXX-XXXX"],
+    details: "20-155-660-0033",
+    lines: ["واتساب: +201556600033"],
   },
   {
     icon: Clock,
@@ -34,16 +29,24 @@ const contactInfo = [
   {
     icon: Mail,
     title: "البريد الإلكتروني",
-    details: "info@meathouse.sa",
+    details: "info@meathouse.shop",
     lines: ["للاستفسارات والطلبات"],
   },
 ];
 
 const socialLinks = [
-  { icon: Instagram, label: "انستقرام", href: "#" },
-  { icon: Twitter, label: "تويتر", href: "#" },
   {
-    icon: MessageCircle,
+    icon: "/icons/instagram.svg",
+    label: "انستقرام",
+    href: "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fmeathouse.eg%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExcm1qOU1WY0VzR1JJWXZSUHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR48nZn5ivpuiI80mdV3pmQd-tjbcFV5-g25WzRC48yyISj9Hw9c9azP4mbVOg_aem_v_WNH3ziPGRVW1NHcjbwtQ&h=AT5vf_zfKfXt_PUwPni-aRRlTkoFJTabtGbD5AJdgssy09TpgpIFZZKNSh_pKKCXFVyoeYtSni-3pjYlV5jDyJ1m54ncKWOkLxCVfgoDXFGE35ODIR0WG6tGjLqCapdzsRuzvP_83V6RcX5rz4dE",
+  },
+  {
+    icon: "/icons/tiktok.svg",
+    label: "تيك توك",
+    href: "https://l.facebook.com/l.php?u=https%3A%2F%2Ftiktok.com%2F%40meathouse.eg%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExcm1qOU1WY0VzR1JJWXZSUHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR7CgYd3CatTLlipExeDnCsYCJqMqU3K8ocbanafAXk8nDv3LurzhA2CWPJ0eA_aem_1qmBN6-14qNAeB7bcUcRBg&h=AT6g1cJnNpR-D3867YFj1Wb16eB14j7i-ZEiKpq3xyzJ25TVor_RN52fw6mPBL4o-vhlh7itcsIAV-n8UtC1s6dU_YByH2G9YfX7B0RNbE42kjS_-zHnIJamE2JabR5pGPzv3TtWpYLo9JWl5xUT",
+  },
+  {
+    icon: "/icons/whatsapp.svg",
     label: "واتساب",
     href: `https://wa.me/201556600033?text=${encodeURIComponent("مرحباً، أريد الاستفسار عن منتجاتكم")}`,
   },
@@ -85,7 +88,7 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
+        <div className="grid">
           {/* Contact Info */}
           <div className="lg:col-span-2 space-y-6">
             {contactInfo.map((info, index) => {
@@ -106,9 +109,13 @@ export default function Contact() {
                     <h3 className="text-white font-bold mb-1 text-sm">
                       {info.title}
                     </h3>
-                    <p className="text-gray-300 text-sm font-medium">
+                    <Link
+                      href={`${info.dirction}`}
+                      target="_blank"
+                      className="text-gray-300 text-sm font-medium"
+                    >
                       {info.details}
-                    </p>
+                    </Link>
                     {info.lines.map((line, i) => (
                       <p key={i} className="text-gray-500 text-xs">
                         {line}
@@ -130,20 +137,26 @@ export default function Contact() {
               {socialLinks.map((social, index) => {
                 const Icon = social.icon;
                 return (
-                  <a
+                  <Link
+                    target="_blank"
                     key={index}
                     href={social.href}
                     className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-crimson hover:border-crimson transition-all duration-300"
                   >
-                    <Icon className="w-5 h-5" />
-                  </a>
+                    <Image
+                      src={social.icon}
+                      alt={social.label}
+                      width={20}
+                      height={20}
+                    />
+                  </Link>
                 );
               })}
             </motion.div>
           </div>
 
           {/* Contact Form */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -215,7 +228,7 @@ export default function Contact() {
                 إرسال الرسالة
               </motion.button>
             </form>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </section>

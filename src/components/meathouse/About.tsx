@@ -4,9 +4,8 @@ import { motion } from "framer-motion";
 import { CheckCircle, Users, Heart, Star } from "lucide-react";
 
 const milestones = [
-  "بدأنا كمحل لحوم صغير في قلب المدينة",
-  "توسعنا لتشمل عدة فروع في المملكة",
-  "أطلقنا خدمة التوصيل عبر التبريد",
+  "بدأنا كمحل لحوم صغير في الفيوم عام 2002",
+  "أطلقنا خدمة التوصيل لتلبية احتياجات عملائنا",
   "أصبحنا الخيار الأول لأكثر من 10,000 عائلة",
 ];
 
@@ -67,9 +66,10 @@ export default function About() {
               من الخبرة والتميز
             </h2>
             <p className="text-gray-400 text-lg leading-relaxed mb-8">
-              منذ تأسيسنا عام 2009، ونحن نسعى لتقديم أفضل تجربة شراء لحوم
+              منذ تأسيسنا عام 2002، ونحن نسعى لتقديم أفضل تجربة شراء لحوم
               لعملائنا الكرام. بدأنا بحلم صغير وأصبحنا اليوم من أبرز معارض
-              اللحوم في المملكة، بفضل التزامنا بالجودة والنضارة ورضا العملاء.
+              اللحوم في محافظة الفيوم، بفضل التزامنا بالجودة والنضارة ورضا
+              العملاء.
             </p>
 
             {/* Milestones */}
@@ -128,7 +128,7 @@ export default function About() {
               );
             })}
 
-            {/* Decorative quote */}
+            {/* Decorative quote
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -146,7 +146,7 @@ export default function About() {
               <p className="text-gold font-bold mt-3 text-sm">
                 — عبدالله المالكي، المؤسس
               </p>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </div>
