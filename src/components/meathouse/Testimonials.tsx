@@ -47,7 +47,7 @@ export default function Testimonials() {
   const prev = useCallback(() => {
     setDirection(-1);
     setCurrent(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length,
     );
   }, []);
 
@@ -59,7 +59,7 @@ export default function Testimonials() {
   return (
     <section className="py-24 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-charcoal via-black to-charcoal" />
+      <div className="absolute inset-0 bg-linear-to-b from-charcoal via-black to-charcoal" />
 
       {/* Decorative */}
       <div
@@ -83,7 +83,7 @@ export default function Testimonials() {
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4">
             ماذا يقول{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-l from-crimson-light to-gold">
+            <span className="text-transparent bg-clip-text bg-linear-to-l from-crimson-light to-gold">
               عملاؤنا
             </span>
           </h2>
@@ -114,21 +114,23 @@ export default function Testimonials() {
                 <div className="relative p-8 sm:p-12 rounded-3xl bg-charcoal-light/30 border border-white/5 backdrop-blur-sm">
                   {/* Quote icon */}
                   <div className="absolute -top-5 right-8">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-crimson to-gold flex items-center justify-center shadow-lg">
+                    <div className="w-10 h-10 rounded-full bg-linear-to-br from-crimson to-gold flex items-center justify-center shadow-lg">
                       <Quote className="w-5 h-5 text-white" />
                     </div>
                   </div>
 
                   <div className="flex flex-col sm:flex-row items-start gap-6">
                     {/* Avatar */}
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-crimson to-gold flex items-center justify-center text-white text-2xl font-bold flex-shrink-0">
+                    <div className="w-16 h-16 rounded-full bg-linear-to-br from-crimson to-gold flex items-center justify-center text-white text-2xl font-bold shrink-0">
                       {testimonials[current].avatar}
                     </div>
 
                     <div className="flex-1">
                       {/* Stars */}
                       <div className="flex gap-1 mb-4">
-                        {Array.from({ length: testimonials[current].rating }).map((_, i) => (
+                        {Array.from({
+                          length: testimonials[current].rating,
+                        }).map((_, i) => (
                           <Star
                             key={i}
                             className="w-5 h-5 fill-gold text-gold"
@@ -176,7 +178,7 @@ export default function Testimonials() {
                   }}
                   className={`h-2 rounded-full transition-all duration-300 ${
                     index === current
-                      ? "w-8 bg-gradient-to-l from-crimson to-gold"
+                      ? "w-8 bg-linear-to-l from-crimson to-gold"
                       : "w-2 bg-white/20 hover:bg-white/40"
                   }`}
                 />

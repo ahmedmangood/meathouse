@@ -56,7 +56,7 @@ export default function Features() {
   return (
     <section id="features" className="py-24 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-charcoal to-black" />
+      <div className="absolute inset-0 bg-linear-to-b from-black via-charcoal to-black" />
 
       {/* Decorative grid pattern */}
       <div
@@ -88,7 +88,7 @@ export default function Features() {
           </motion.span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4">
             نقدم لك{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-l from-crimson-light to-gold">
+            <span className="text-transparent bg-clip-text bg-linear-to-l from-crimson-light to-gold">
               الأفضل دائماً
             </span>
           </h2>
@@ -115,12 +115,12 @@ export default function Features() {
                 className="group relative p-8 rounded-2xl bg-charcoal-light/50 backdrop-blur-sm border border-white/5 hover:border-white/10 transition-all duration-500 overflow-hidden"
               >
                 {/* Hover gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-b from-crimson/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-linear-to-b from-crimson/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 {/* Icon */}
                 <div className="relative z-10">
                   <div
-                    className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-16 h-16 rounded-2xl bg-linear-to-br ${feature.gradient} flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}
                   >
                     <Icon className="w-8 h-8 text-white" />
                   </div>
@@ -135,7 +135,7 @@ export default function Features() {
 
                 {/* Bottom accent line */}
                 <motion.div
-                  className={`absolute bottom-0 right-0 h-1 bg-gradient-to-l ${feature.gradient}`}
+                  className={`absolute bottom-0 right-0 h-1 bg-linear-to-l ${feature.gradient}`}
                   initial={{ width: 0 }}
                   whileInView={{ width: "100%" }}
                   viewport={{ once: true }}

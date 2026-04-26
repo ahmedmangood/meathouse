@@ -81,7 +81,7 @@ export default function ProductsSlider() {
   return (
     <section id="products" className="py-24 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-charcoal to-black" />
+      <div className="absolute inset-0 bg-linear-to-b from-black via-charcoal to-black" />
 
       {/* Decorative elements */}
       <motion.div
@@ -104,7 +104,7 @@ export default function ProductsSlider() {
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4">
             منتجاتنا{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-l from-crimson-light to-gold">
+            <span className="text-transparent bg-clip-text bg-linear-to-l from-crimson-light to-gold">
               المميزة
             </span>
           </h2>
@@ -163,7 +163,7 @@ export default function ProductsSlider() {
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="min-w-[280px] sm:min-w-[300px] snap-start group"
+              className="min-w-70 sm:min-w-75 snap-start group"
             >
               <div className="relative rounded-2xl overflow-hidden bg-charcoal-light/50 border border-white/5 hover:border-crimson/30 transition-all duration-500 hover:shadow-2xl hover:shadow-crimson/10">
                 {/* Image */}
@@ -175,12 +175,12 @@ export default function ProductsSlider() {
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   {/* Overlay gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-charcoal via-transparent to-transparent" />
 
                   {/* Badge */}
                   <div className="absolute top-3 right-3">
                     <span
-                      className={`px-3 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-l ${product.badgeColor}`}
+                      className={`px-3 py-1 rounded-full text-xs font-bold text-white bg-linear-to-l ${product.badgeColor}`}
                     >
                       {product.badge}
                     </span>
@@ -193,7 +193,7 @@ export default function ProductsSlider() {
                       {Math.round(
                         ((+product.originalPrice - +product.price) /
                           +product.originalPrice) *
-                          100
+                          100,
                       )}
                       %
                     </span>
@@ -214,9 +214,7 @@ export default function ProductsSlider() {
                       <span className="text-2xl font-black text-crimson-light">
                         {product.price}
                       </span>
-                      <span className="text-sm text-gray-500">
-                        ج.م / كجم
-                      </span>
+                      <span className="text-sm text-gray-500">ج.م / كجم</span>
                     </div>
                     <span className="text-sm text-gray-500 line-through">
                       {product.originalPrice}
@@ -226,7 +224,7 @@ export default function ProductsSlider() {
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full mt-4 py-3 bg-gradient-to-l from-crimson to-crimson-dark text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-crimson/20 transition-all duration-300 text-sm"
+                    className="w-full mt-4 py-3 bg-linear-to-l from-crimson to-crimson-dark text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-crimson/20 transition-all duration-300 text-sm"
                   >
                     أضف للسلة
                   </motion.button>

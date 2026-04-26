@@ -42,14 +42,18 @@ const contactInfo = [
 const socialLinks = [
   { icon: Instagram, label: "انستقرام", href: "#" },
   { icon: Twitter, label: "تويتر", href: "#" },
-  { icon: MessageCircle, label: "واتساب", href: `https://wa.me/201556600033?text=${encodeURIComponent("مرحباً، أريد الاستفسار عن منتجاتكم")}` },
+  {
+    icon: MessageCircle,
+    label: "واتساب",
+    href: `https://wa.me/201556600033?text=${encodeURIComponent("مرحباً، أريد الاستفسار عن منتجاتكم")}`,
+  },
 ];
 
 export default function Contact() {
   return (
     <section id="contact" className="py-24 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-charcoal via-black to-charcoal" />
+      <div className="absolute inset-0 bg-linear-to-b from-charcoal via-black to-charcoal" />
 
       {/* Decorative */}
       <motion.div
@@ -72,7 +76,7 @@ export default function Contact() {
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4">
             نحن هنا{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-l from-crimson-light to-gold">
+            <span className="text-transparent bg-clip-text bg-linear-to-l from-crimson-light to-gold">
               لخدمتك
             </span>
           </h2>
@@ -95,7 +99,7 @@ export default function Contact() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex gap-4 p-5 rounded-xl bg-charcoal-light/30 border border-white/5 hover:border-crimson/10 transition-all duration-300 group"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-crimson/20 to-crimson/5 flex items-center justify-center flex-shrink-0 group-hover:from-crimson/30 transition-all duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-linear-to-br from-crimson/20 to-crimson/5 flex items-center justify-center shrink-0 group-hover:from-crimson/30 transition-all duration-300">
                     <Icon className="w-5 h-5 text-crimson-light" />
                   </div>
                   <div>
@@ -205,7 +209,7 @@ export default function Contact() {
                 type="submit"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full py-4 bg-gradient-to-l from-crimson to-crimson-dark text-white font-bold rounded-xl hover:shadow-lg hover:shadow-crimson/20 transition-all duration-300 flex items-center justify-center gap-2"
+                className="w-full py-4 bg-linear-to-l from-crimson to-crimson-dark text-white font-bold rounded-xl hover:shadow-lg hover:shadow-crimson/20 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <Send className="w-5 h-5" />
                 إرسال الرسالة

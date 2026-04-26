@@ -51,7 +51,7 @@ export default function SpecialOffers() {
   return (
     <section id="offers" className="py-24 relative overflow-hidden">
       {/* Background with pattern */}
-      <div className="absolute inset-0 bg-gradient-to-b from-charcoal via-black to-charcoal" />
+      <div className="absolute inset-0 bg-linear-to-b from-charcoal via-black to-charcoal" />
       <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
@@ -80,7 +80,7 @@ export default function SpecialOffers() {
           </motion.div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4">
             عروض{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-l from-crimson-light to-gold">
+            <span className="text-transparent bg-clip-text bg-linear-to-l from-crimson-light to-gold">
               لا تفوتها
             </span>
           </h2>
@@ -90,10 +90,7 @@ export default function SpecialOffers() {
         </motion.div>
 
         {/* Offers Grid */}
-        <div
-          ref={ref}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20"
-        >
+        <div ref={ref} className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
           {offers.map((offer, index) => (
             <motion.div
               key={index}
@@ -111,12 +108,12 @@ export default function SpecialOffers() {
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/50 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-charcoal via-charcoal/50 to-transparent" />
 
                 {/* Tag */}
                 <div className="absolute top-4 right-4">
                   <span
-                    className={`px-3 py-1.5 rounded-full text-xs font-bold text-white bg-gradient-to-l ${offer.tagColor} shadow-lg`}
+                    className={`px-3 py-1.5 rounded-full text-xs font-bold text-white bg-linear-to-l ${offer.tagColor} shadow-lg`}
                   >
                     {offer.tag}
                   </span>
@@ -129,7 +126,7 @@ export default function SpecialOffers() {
                   <h3 className="text-xl font-bold text-white group-hover:text-gold transition-colors duration-300">
                     {offer.title}
                   </h3>
-                  <Timer className="w-5 h-5 text-crimson-light flex-shrink-0" />
+                  <Timer className="w-5 h-5 text-crimson-light shrink-0" />
                 </div>
                 <p className="text-sm text-gray-400 mb-6 leading-relaxed">
                   {offer.description}
@@ -153,7 +150,7 @@ export default function SpecialOffers() {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full mt-5 py-3.5 bg-gradient-to-l from-green-500 to-green-600 text-white font-bold rounded-xl hover:shadow-lg hover:shadow-green-500/20 transition-all duration-300 flex items-center justify-center gap-2"
+                  className="w-full mt-5 py-3.5 bg-linear-to-l from-green-500 to-green-600 text-white font-bold rounded-xl hover:shadow-lg hover:shadow-green-500/20 transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <MessageCircle className="w-5 h-5" />
                   اطلب عبر واتساب
@@ -178,10 +175,10 @@ export default function SpecialOffers() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="text-center p-6 rounded-2xl bg-gradient-to-b from-crimson/5 to-transparent border border-white/5"
+              className="text-center p-6 rounded-2xl bg-linear-to-b from-crimson/5 to-transparent border border-white/5"
             >
               <motion.span
-                className="text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-b from-gold to-gold-dark"
+                className="text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-linear-to-b from-gold to-gold-dark"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}

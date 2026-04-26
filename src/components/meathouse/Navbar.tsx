@@ -59,9 +59,7 @@ export default function Navbar() {
               <span className="text-xl font-bold text-white tracking-wide">
                 MeatHouse
               </span>
-              <span className="text-sm text-gold font-medium">
-                بيت اللحوم
-              </span>
+              <span className="text-sm text-gold font-medium">بيت اللحوم</span>
             </div>
           </motion.a>
 
@@ -77,7 +75,7 @@ export default function Navbar() {
                 className="relative px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-300 group"
               >
                 {link.label}
-                <span className="absolute bottom-0 right-0 w-0 h-0.5 bg-gradient-to-l from-crimson to-gold group-hover:w-full transition-all duration-300" />
+                <span className="absolute bottom-0 right-0 w-0 h-0.5 bg-linear-to-l from-crimson to-gold group-hover:w-full transition-all duration-300" />
               </motion.a>
             ))}
             <motion.a
@@ -87,7 +85,7 @@ export default function Navbar() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.7, duration: 0.4 }}
-              className="mr-4 px-6 py-2 bg-gradient-to-l from-green-500 to-green-600 text-white text-sm font-semibold rounded-full hover:shadow-lg hover:shadow-green-500/20 transition-all duration-300 flex items-center gap-2"
+              className="mr-4 px-6 py-2 bg-linear-to-l from-green-500 to-green-600 text-white text-sm font-semibold rounded-full hover:shadow-lg hover:shadow-green-500/20 transition-all duration-300 flex items-center gap-2"
             >
               <MessageCircle className="w-4 h-4" />
               تواصل واتساب
@@ -136,7 +134,7 @@ export default function Navbar() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.35 }}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block text-center mt-4 px-6 py-3 bg-gradient-to-l from-green-500 to-green-600 text-white font-semibold rounded-full flex items-center justify-center gap-2"
+                className="block text-center mt-4 px-6 py-3 bg-linear-to-l from-green-500 to-green-600 text-white font-semibold rounded-full items-center justify-center gap-2"
               >
                 <MessageCircle className="w-5 h-5" />
                 تواصل واتساب

@@ -43,9 +43,7 @@ export default function HeroSlider() {
 
   const prevSlide = useCallback(() => {
     setDirection(-1);
-    setCurrentSlide(
-      (prev) => (prev - 1 + slides.length) % slides.length
-    );
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   }, []);
 
   useEffect(() => {
@@ -90,8 +88,8 @@ export default function HeroSlider() {
             priority={currentSlide === 0}
           />
           {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-l from-black/80 via-black/60 to-black/40" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30" />
+          <div className="absolute inset-0 bg-linear-to-l from-black/80 via-black/60 to-black/40" />
+          <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-black/30" />
         </motion.div>
       </AnimatePresence>
 
@@ -131,7 +129,7 @@ export default function HeroSlider() {
                 initial={{ opacity: 0, width: 0 }}
                 animate={{ opacity: 1, width: 80 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="h-1 bg-gradient-to-l from-gold to-crimson rounded-full mb-6"
+                className="h-1 bg-linear-to-l from-gold to-crimson rounded-full mb-6"
               />
               <motion.h2
                 initial={{ opacity: 0, x: 50 }}
@@ -165,7 +163,7 @@ export default function HeroSlider() {
               >
                 <a
                   href={slides[currentSlide].ctaLink}
-                  className="px-8 py-4 bg-gradient-to-l from-crimson to-crimson-dark text-white font-bold rounded-full text-base hover:shadow-2xl hover:shadow-crimson/30 transition-all duration-300 hover:scale-105"
+                  className="px-8 py-4 bg-linear-to-l from-crimson to-crimson-dark text-white font-bold rounded-full text-base hover:shadow-2xl hover:shadow-crimson/30 transition-all duration-300 hover:scale-105"
                 >
                   {slides[currentSlide].cta}
                 </a>
@@ -209,7 +207,7 @@ export default function HeroSlider() {
             <span
               className={`block h-2 rounded-full transition-all duration-500 ${
                 index === currentSlide
-                  ? "w-10 bg-gradient-to-l from-gold to-crimson"
+                  ? "w-10 bg-linear-to-l from-gold to-crimson"
                   : "w-6 bg-white/30 hover:bg-white/50"
               }`}
             />
@@ -226,7 +224,7 @@ export default function HeroSlider() {
         <span className="text-xs text-gray-400 -rotate-90 origin-center whitespace-nowrap">
           اكتشف المزيد
         </span>
-        <div className="w-px h-8 bg-gradient-to-b from-gold to-transparent" />
+        <div className="w-px h-8 bg-linear-to-b from-gold to-transparent" />
       </motion.div>
     </section>
   );

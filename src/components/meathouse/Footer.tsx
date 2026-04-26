@@ -32,7 +32,11 @@ const categoryLinks = [
 const socialLinks = [
   { icon: Instagram, label: "انستقرام", href: "#" },
   { icon: Twitter, label: "تويتر (X)", href: "#" },
-  { icon: MessageCircle, label: "واتساب", href: `https://wa.me/201556600033?text=${encodeURIComponent("مرحباً، أريد الاستفسار")}` },
+  {
+    icon: MessageCircle,
+    label: "واتساب",
+    href: `https://wa.me/201556600033?text=${encodeURIComponent("مرحباً، أريد الاستفسار")}`,
+  },
 ];
 
 export default function Footer() {
@@ -43,10 +47,10 @@ export default function Footer() {
   return (
     <footer className="relative pt-20 pb-6 overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black to-charcoal-dark" />
+      <div className="absolute inset-0 bg-linear-to-b from-black to-charcoal-dark" />
 
       {/* Top decorative line */}
-      <div className="absolute top-0 right-0 left-0 h-px bg-gradient-to-l from-transparent via-crimson/50 to-transparent" />
+      <div className="absolute top-0 right-0 left-0 h-px bg-linear-to-l from-transparent via-crimson/50 to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
@@ -93,7 +97,7 @@ export default function Footer() {
                 <span dir="ltr">info@meathouse.sa</span>
               </a>
               <div className="flex items-start gap-2 text-sm text-gray-400">
-                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
                 <span>شارع الملك فهد، حي العليا، الرياض</span>
               </div>
             </div>
@@ -183,7 +187,7 @@ export default function Footer() {
                   placeholder="بريدك الإلكتروني"
                   className="flex-1 px-4 py-2.5 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-600 text-sm focus:outline-none focus:border-crimson/50 transition-all duration-300"
                 />
-                <button className="px-4 py-2.5 bg-crimson text-white rounded-xl hover:bg-crimson-light transition-colors duration-300 text-sm font-semibold flex-shrink-0">
+                <button className="px-4 py-2.5 bg-crimson text-white rounded-xl hover:bg-crimson-light transition-colors duration-300 text-sm font-semibold shrink-0">
                   اشترك
                 </button>
               </div>
