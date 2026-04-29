@@ -79,7 +79,7 @@ export default function HeroSlider() {
             fill
             sizes="100vw"
             className="object-cover"
-            quality={85}
+            loading="eager"
           />
           {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-linear-to-l from-black/80 via-black/60 to-black/40" />
