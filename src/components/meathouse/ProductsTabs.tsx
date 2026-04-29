@@ -324,10 +324,16 @@ function ProductCard({
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="w-10 h-10 rounded-xl bg-linear-to-br from-green-500 to-green-600 flex items-center justify-center text-white shadow-lg hover:shadow-xl hover:shadow-green-500/20 transition-all duration-300"
+            className="w-10 h-10 rounded-xl bg-linear-to-br bg-white/15 flex items-center justify-center text-white shadow-lg hover:shadow-xl hover:shadow-green-500/20 transition-all duration-300"
             title="اطلب عبر واتساب"
           >
-            <MessageCircle className="w-5 h-5" />
+            <Image
+              src={"/icons/whatsapp.svg"}
+              width={50}
+              height={50}
+              alt="WhatsApp"
+              className="w-5 h-5"
+            />
           </motion.a>
         </div>
       </div>
@@ -344,7 +350,6 @@ function ProductModal({
   product: Product;
   onClose: () => void;
 }) {
-  const catImage = categoryImages[product.category] || "/images/hero1.png";
   const catGrad =
     categoryGradients[product.category] || "from-crimson to-crimson-dark";
 
@@ -391,12 +396,6 @@ function ProductModal({
             sizes="(max-width: 768px) 100vw, 672px"
             className="object-cover"
           />
-          {/* <div className="absolute inset-0 bg-linear-to-t from-charcoal via-charcoal/40 to-transparent" />
-          <div
-            className={
-              "absolute inset-0 bg-linear-to-l " + catGrad + " opacity-30"
-            }
-          /> */}
 
           {/* Category badge */}
           <div className="absolute top-4 right-4">
@@ -502,7 +501,13 @@ function ProductModal({
               whileTap={{ scale: 0.98 }}
               className="flex-1 py-4 bg-linear-to-l from-green-500 to-green-600 text-white font-bold rounded-2xl hover:shadow-lg hover:shadow-green-500/20 transition-all duration-300 flex items-center justify-center gap-3"
             >
-              <MessageCircle className="w-5 h-5" />
+              <Image
+                src={"/icons/whatsapp-white.svg"}
+                width={50}
+                height={50}
+                alt="WhatsApp"
+                className="w-5 h-5 "
+              />
               اطلب عبر واتساب
             </motion.a>
             <button
