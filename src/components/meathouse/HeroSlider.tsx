@@ -79,7 +79,7 @@ export default function HeroSlider() {
             fill
             sizes="100vw"
             className="object-cover"
-            loading={`eager`}
+            quality={85}
           />
           {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-linear-to-l from-black/80 via-black/60 to-black/40" />
@@ -88,7 +88,7 @@ export default function HeroSlider() {
       </AnimatePresence>
 
       {/* Animated decorative elements */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none hidden md:block">
         <motion.div
           className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-crimson/10 blur-3xl"
           animate={{
