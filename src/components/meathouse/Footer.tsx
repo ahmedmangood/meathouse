@@ -12,6 +12,7 @@ import {
   ChevronUp,
 } from "lucide-react";
 import Link from "next/link";
+import { socialLinks } from "./Contact";
 
 const quickLinks = [
   { label: "الرئيسية", href: "#home" },
@@ -22,24 +23,6 @@ const quickLinks = [
 ];
 
 const categoryLinks = ["جاهز للتسوية", "الكندوز", "حجز مسبق"];
-
-const socialLinks = [
-  {
-    icon: "/icons/instagram.svg",
-    label: "انستقرام",
-    href: "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fmeathouse.eg%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExcm1qOU1WY0VzR1JJWXZSUHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR48nZn5ivpuiI80mdV3pmQd-tjbcFV5-g25WzRC48yyISj9Hw9c9azP4mbVOg_aem_v_WNH3ziPGRVW1NHcjbwtQ&h=AT5vf_zfKfXt_PUwPni-aRRlTkoFJTabtGbD5AJdgssy09TpgpIFZZKNSh_pKKCXFVyoeYtSni-3pjYlV5jDyJ1m54ncKWOkLxCVfgoDXFGE35ODIR0WG6tGjLqCapdzsRuzvP_83V6RcX5rz4dE",
-  },
-  {
-    icon: "/icons/tiktok.svg",
-    label: "تيك توك",
-    href: "https://l.facebook.com/l.php?u=https%3A%2F%2Ftiktok.com%2F%40meathouse.eg%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExcm1qOU1WY0VzR1JJWXZSUHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR7CgYd3CatTLlipExeDnCsYCJqMqU3K8ocbanafAXk8nDv3LurzhA2CWPJ0eA_aem_1qmBN6-14qNAeB7bcUcRBg&h=AT6g1cJnNpR-D3867YFj1Wb16eB14j7i-ZEiKpq3xyzJ25TVor_RN52fw6mPBL4o-vhlh7itcsIAV-n8UtC1s6dU_YByH2G9YfX7B0RNbE42kjS_-zHnIJamE2JabR5pGPzv3TtWpYLo9JWl5xUT",
-  },
-  {
-    icon: "/icons/whatsapp.svg",
-    label: "واتساب",
-    href: `https://wa.me/201556600033?text=${encodeURIComponent("مرحباً، أريد الاستفسار عن منتجاتكم")}`,
-  },
-];
 
 export default function Footer() {
   const scrollToTop = () => {

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { CheckCircle, Users, Heart, Star } from "lucide-react";
 
 const milestones = [
-  "بدأنا كمحل لحوم صغير في الفيوم عام 2002",
+  "بدأنا بمجال التربية بمزارعنا عام 2002",
   "أطلقنا خدمة التوصيل لتلبية احتياجات عملائنا",
   "أصبحنا الخيار الأول لأكثر من 10,000 عائلة",
 ];

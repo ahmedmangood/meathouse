@@ -9,6 +9,7 @@ import About from "@/components/meathouse/About";
 import Testimonials from "@/components/meathouse/Testimonials";
 import Contact from "@/components/meathouse/Contact";
 import Footer from "@/components/meathouse/Footer";
+import FloatingWhatsApp from "@/components/meathouse/FloatingWhatsApp";
 
 export default function Home() {
   return (
@@ -17,11 +18,12 @@ export default function Home() {
       <HeroSlider />
       <Features />
       <ProductsTabs />
-      <SpecialOffers />
       <About />
+      {/* <SpecialOffers /> */}
       <Testimonials />
       <Contact />
       <Footer />
+      <FloatingWhatsApp />
     </main>
   );
 }

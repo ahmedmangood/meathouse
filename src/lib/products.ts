@@ -21,53 +21,12 @@ export interface Category {
 
 export const allProducts: Product[] = [
   {
-    id: 61,
-    name: "مواسير",
-    price: 40,
-    category: "حجز مسبق",
-    image: "/products/dummy.png",
-    description: "مواسير بلدي طازجة، مقرمشة ولذيذة، مثالية للشوي أو القلي",
-  },
-  {
-    id: 62,
-    name: "بوش عجالي",
-    price: 119.99,
-    category: "حجز مسبق",
-    image: "/products/dummy.png",
-    description: "بوش عجالي طازج بجودة عالية، مناسب لجميع أطباق العجال",
-  },
-  {
     id: 63,
     name: "الطحال",
     price: 140,
     category: "حجز مسبق",
     image: "/products/dummy.png",
     description: "طحال بلدي طازج، غني بالحديد والمعادن، طعم مميز ومحبب",
-  },
-  {
-    id: 64,
-    name: "حلويات",
-    price: 120.99,
-    category: "حجز مسبق",
-    image: "/products/dummy.png",
-    description:
-      "حلويات لحم بلدي طازجة، مقلية ومقرمشة، من أشهى الأكلات الشعبية",
-  },
-  {
-    id: 65,
-    name: "دهن كلاوي",
-    price: 109.99,
-    category: "حجز مسبق",
-    image: "/products/dummy.png",
-    description: "دهن كلاوي بلدي نقي، يضيف نكهة غنية للأطباق المختلفة",
-  },
-  {
-    id: 66,
-    name: "فشة",
-    price: 90,
-    category: "حجز مسبق",
-    image: "/products/dummy.png",
-    description: "فشة بلدي طازجة نظيفة ومحضرة بعناية لتقديم أفضل جودة",
   },
   {
     id: 79,
@@ -369,6 +328,14 @@ export const allProducts: Product[] = [
     image: "/products/صباع-قشرة-لحمة-باردة.png",
     description: "صباع قشرة لحمة باردة، مقرمشة ولذيذة من أشهى المقبلات",
   },
+  {
+    id: 104,
+    name: "لحم ضاني",
+    price: 360,
+    category: "الضاني",
+    image: "/products/لحمة-باردة.png",
+    description: "لحم ضاني بلدي طازج، قطعة ممتازة من أفضل أنواع اللحوم الضاني",
+  },
 ];
 
 export const categories: Category[] = [
@@ -398,5 +365,14 @@ export const categories: Category[] = [
     gradient: "from-charcoal-lighter to-charcoal-light",
     badge: "حجز الآن",
     products: allProducts.filter((p) => p.category === "حجز مسبق"),
+  },
+  {
+    key: " الضاني",
+    label: "الضاني",
+    icon: Crown,
+    image: "/images/cat-raw.png",
+    gradient: "from-red-700 to-red-900",
+    badge: "ضاني",
+    products: allProducts.filter((p) => p.category === "الضاني"),
   },
 ];

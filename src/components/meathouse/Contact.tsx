@@ -34,16 +34,21 @@ const contactInfo = [
   },
 ];
 
-const socialLinks = [
+export const socialLinks = [
+  {
+    icon: "/icons/facebook.svg",
+    label: "فيسبوك",
+    href: "https://www.facebook.com/meathouse.eg",
+  },
   {
     icon: "/icons/instagram.svg",
     label: "انستقرام",
-    href: "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fmeathouse.eg%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExcm1qOU1WY0VzR1JJWXZSUHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR48nZn5ivpuiI80mdV3pmQd-tjbcFV5-g25WzRC48yyISj9Hw9c9azP4mbVOg_aem_v_WNH3ziPGRVW1NHcjbwtQ&h=AT5vf_zfKfXt_PUwPni-aRRlTkoFJTabtGbD5AJdgssy09TpgpIFZZKNSh_pKKCXFVyoeYtSni-3pjYlV5jDyJ1m54ncKWOkLxCVfgoDXFGE35ODIR0WG6tGjLqCapdzsRuzvP_83V6RcX5rz4dE",
+    href: "https://www.instagram.com/meathouse.eg?fbclid=IwY2xjawRepfhleHRuA2FlbQIxMABicmlkETFybWo5TVZjRXNHUklZdlJQc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHjydmfmK-m6IjzSZ1XemZB362NtwVXn6DblbNELjzLIhKP0fD1z1rM_iZtU6_aem_v_WNH3ziPGRVW1NHcjbwtQ",
   },
   {
     icon: "/icons/tiktok.svg",
     label: "تيك توك",
-    href: "https://l.facebook.com/l.php?u=https%3A%2F%2Ftiktok.com%2F%40meathouse.eg%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExcm1qOU1WY0VzR1JJWXZSUHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR7CgYd3CatTLlipExeDnCsYCJqMqU3K8ocbanafAXk8nDv3LurzhA2CWPJ0eA_aem_1qmBN6-14qNAeB7bcUcRBg&h=AT6g1cJnNpR-D3867YFj1Wb16eB14j7i-ZEiKpq3xyzJ25TVor_RN52fw6mPBL4o-vhlh7itcsIAV-n8UtC1s6dU_YByH2G9YfX7B0RNbE42kjS_-zHnIJamE2JabR5pGPzv3TtWpYLo9JWl5xUT",
+    href: "https://www.tiktok.com/@meathouse.eg?fbclid=IwY2xjawRephhleHRuA2FlbQIxMABicmlkETFybWo5TVZjRXNHUklZdlJQc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHsKBh3cJq1MuWKkTF4OcKxgImoypTcryhxtqdp8BeTycO_cu6vOEDYJY8nR4_aem_1qmBN6-14qNAeB7bcUcRBg",
   },
   {
     icon: "/icons/whatsapp.svg",
@@ -88,75 +93,75 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid">
-          {/* Contact Info */}
-          <div className="lg:col-span-2 space-y-6">
-            {contactInfo.map((info, index) => {
-              const Icon = info.icon;
+        {/* <div className="grid"> */}
+        {/* Contact Info */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          {contactInfo.map((info, index) => {
+            const Icon = info.icon;
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="flex gap-4 p-5 rounded-xl bg-charcoal-light/30 border border-white/5 hover:border-crimson/10 transition-all duration-300 group"
+              >
+                <div className="w-12 h-12 rounded-xl bg-linear-to-br from-crimson/20 to-crimson/5 flex items-center justify-center shrink-0 group-hover:from-crimson/30 transition-all duration-300">
+                  <Icon className="w-5 h-5 text-crimson-light" />
+                </div>
+                <div>
+                  <h3 className="text-white font-bold mb-1 text-sm">
+                    {info.title}
+                  </h3>
+                  <Link
+                    href={`${info.dirction}`}
+                    target="_blank"
+                    className="text-gray-300 text-sm font-medium"
+                  >
+                    {info.details}
+                  </Link>
+                  {info.lines.map((line, i) => (
+                    <p key={i} className="text-gray-500 text-xs">
+                      {line}
+                    </p>
+                  ))}
+                </div>
+              </motion.div>
+            );
+          })}
+
+          {/* Social Links */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="flex gap-3 pt-4"
+          >
+            {socialLinks.map((social, index) => {
+              const Icon = social.icon;
               return (
-                <motion.div
+                <Link
+                  target="_blank"
                   key={index}
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex gap-4 p-5 rounded-xl bg-charcoal-light/30 border border-white/5 hover:border-crimson/10 transition-all duration-300 group"
+                  href={social.href}
+                  className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-crimson hover:border-crimson transition-all duration-300"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-linear-to-br from-crimson/20 to-crimson/5 flex items-center justify-center shrink-0 group-hover:from-crimson/30 transition-all duration-300">
-                    <Icon className="w-5 h-5 text-crimson-light" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-bold mb-1 text-sm">
-                      {info.title}
-                    </h3>
-                    <Link
-                      href={`${info.dirction}`}
-                      target="_blank"
-                      className="text-gray-300 text-sm font-medium"
-                    >
-                      {info.details}
-                    </Link>
-                    {info.lines.map((line, i) => (
-                      <p key={i} className="text-gray-500 text-xs">
-                        {line}
-                      </p>
-                    ))}
-                  </div>
-                </motion.div>
+                  <Image
+                    src={social.icon}
+                    alt={social.label}
+                    width={20}
+                    height={20}
+                  />
+                </Link>
               );
             })}
+          </motion.div>
+        </div>
 
-            {/* Social Links */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="flex gap-3 pt-4"
-            >
-              {socialLinks.map((social, index) => {
-                const Icon = social.icon;
-                return (
-                  <Link
-                    target="_blank"
-                    key={index}
-                    href={social.href}
-                    className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-crimson hover:border-crimson transition-all duration-300"
-                  >
-                    <Image
-                      src={social.icon}
-                      alt={social.label}
-                      width={20}
-                      height={20}
-                    />
-                  </Link>
-                );
-              })}
-            </motion.div>
-          </div>
-
-          {/* Contact Form */}
-          {/* <motion.div
+        {/* Contact Form */}
+        {/* <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -229,7 +234,7 @@ export default function Contact() {
               </motion.button>
             </form>
           </motion.div> */}
-        </div>
+        {/* </div> */}
       </div>
     </section>
   );

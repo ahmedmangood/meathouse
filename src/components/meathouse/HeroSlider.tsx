@@ -18,15 +18,15 @@ const slides = [
     image: "/images/hero2.png",
     title: "قطع مختارة بعناية",
     subtitle: "نلتزم بجودة القطع المختارة",
-    description: "كل قطعة تمر بفحص دقيق لضمان أعلى معايير الجودة والنضارة",
+    description: "كل قطعة تمر بفحص دقيق لضمان أعلى معايير الجودة ",
     cta: "اعرف المزيد",
     ctaLink: "#about",
   },
   {
     image: "/images/hero3.png",
     title: "عروض حصرية",
-    subtitle: "خصومات تصل إلى 30%",
-    description: "استمتع بعروضنا الأسبوعية على مجموعة واسعة من المنتجات",
+    subtitle: "",
+    description: "استمتع بعروضنا على مجموعة واسعة من المنتجات",
     cta: "شاهد العروض",
     ctaLink: "#offers",
   },
@@ -84,8 +84,10 @@ export default function HeroSlider() {
             src={slides[currentSlide].image}
             alt={slides[currentSlide].title}
             fill
+            sizes="100vw"
             className="object-cover"
             priority={currentSlide === 0}
+            loading={currentSlide === 0 ? "eager" : "lazy"}
           />
           {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-linear-to-l from-black/80 via-black/60 to-black/40" />

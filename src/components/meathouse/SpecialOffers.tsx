@@ -106,6 +106,7 @@ export default function SpecialOffers() {
                   src={offer.image}
                   alt={offer.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-charcoal via-charcoal/50 to-transparent" />

@@ -172,6 +172,7 @@ export default function ProductsSlider() {
                     src={product.image}
                     alt={product.name}
                     fill
+                    sizes="(max-width: 640px) 85vw, (max-width: 1024px) 45vw, 320px"
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   {/* Overlay gradient */}

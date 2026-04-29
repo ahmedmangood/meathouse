@@ -3,10 +3,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  ShoppingBag,
-  Flame,
-  Sparkles,
-  Crown,
   MessageCircle,
   X,
   Eye,
@@ -23,12 +19,14 @@ const categoryImages: Record<string, string> = {
   "جاهز للتسوية": "/images/cat-ready.png",
   الكندوز: "/images/cat-premium.png",
   "حجز مسبق": "/images/cat-preorder.png",
+  " الضاني": "/images/cat-raw.png",
 };
 
 const categoryGradients: Record<string, string> = {
   "جاهز للتسوية": "from-crimson to-crimson-dark",
   الكندوز: "from-gold to-gold-dark",
   "حجز مسبق": "from-charcoal-lighter to-charcoal-light",
+  " الضاني": "from-red-700 to-red-900",
 };
 
 function formatPrice(price: number): string {
@@ -143,6 +141,7 @@ export default function ProductsTabs() {
               src={activeCategory.image}
               alt={activeCategory.label}
               fill
+              sizes="(max-width: 768px) 100vw, 1200px"
               className="object-cover"
             />
             <div
@@ -267,6 +266,7 @@ function ProductCard({
           src={product.image}
           alt={product.name}
           fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
           className="object-cover object-center"
         />
         {/* Hover overlay with eye icon */}
@@ -388,6 +388,7 @@ function ProductModal({
             src={product.image}
             alt={product.name}
             fill
+            sizes="(max-width: 768px) 100vw, 672px"
             className="object-cover"
           />
           {/* <div className="absolute inset-0 bg-linear-to-t from-charcoal via-charcoal/40 to-transparent" />
