@@ -1,13 +1,12 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 
 const slides = [
   {
-    image: "/images/hero1.png",
+    image: "/images/hero1.webp",
     title: "أجود أنواع اللحوم",
     subtitle: "لحم طازج يوصل لباب بيتك",
     description: "نختار لك أفضل القطع بعناية فائقة من أفضل المزارع",
@@ -15,7 +14,7 @@ const slides = [
     ctaLink: "#products",
   },
   {
-    image: "/images/hero2.png",
+    image: "/images/hero2.webp",
     title: "قطع مختارة بعناية",
     subtitle: "نلتزم بجودة القطع المختارة",
     description: "كل قطعة تمر بفحص دقيق لضمان أعلى معايير الجودة ",
@@ -23,7 +22,7 @@ const slides = [
     ctaLink: "#about",
   },
   {
-    image: "/images/hero3.png",
+    image: "/images/hero3.webp",
     title: "عروض حصرية",
     subtitle: "",
     description: "استمتع بعروضنا على مجموعة واسعة من المنتجات",
@@ -41,10 +40,7 @@ export default function HeroSlider() {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   }, []);
 
-  const prevSlide = useCallback(() => {
-    setDirection(-1);
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  }, []);
+  const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => {
     const timer = setInterval(nextSlide, 6000);
@@ -52,18 +48,15 @@ export default function HeroSlider() {
   }, [nextSlide]);
 
   const slideVariants = {
-    enter: (dir: number) => ({
-      x: dir > 0 ? 300 : -300,
+    enter: {
       opacity: 0,
-    }),
+    },
     center: {
-      x: 0,
       opacity: 1,
     },
-    exit: (dir: number) => ({
-      x: dir > 0 ? -300 : 300,
+    exit: {
       opacity: 0,
-    }),
+    },
   };
 
   return (
@@ -86,8 +79,7 @@ export default function HeroSlider() {
             fill
             sizes="100vw"
             className="object-cover"
-            priority={currentSlide === 0}
-            loading={currentSlide === 0 ? "eager" : "lazy"}
+            loading={`eager`}
           />
           {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-linear-to-l from-black/80 via-black/60 to-black/40" />
@@ -180,20 +172,6 @@ export default function HeroSlider() {
           </AnimatePresence>
         </div>
       </div>
-
-      {/* Navigation Arrows */}
-      {/* <button
-        onClick={nextSlide}
-        className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300"
-      >
-        <ChevronLeft size={24} />
-      </button>
-      <button
-        onClick={prevSlide}
-        className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300"
-      >
-        <ChevronRight size={24} />
-      </button> */}
 
       {/* Slide Indicators */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">

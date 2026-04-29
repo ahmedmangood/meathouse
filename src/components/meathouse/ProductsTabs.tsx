@@ -16,10 +16,10 @@ import Image from "next/image";
 import { allProducts, categories, Category, Product } from "@/lib/products";
 
 const categoryImages: Record<string, string> = {
-  "جاهز للتسوية": "/images/cat-ready.png",
-  الكندوز: "/images/cat-premium.png",
-  "حجز مسبق": "/images/cat-preorder.png",
-  " الضاني": "/images/cat-raw.png",
+  "جاهز للتسوية": "/images/readyfor.webp",
+  الكندوز: "/images/kandoz.webp",
+  "حجز مسبق": "/images/byorder.webp",
+  " الضاني": "/images/lamb.webp",
 };
 
 const categoryGradients: Record<string, string> = {
