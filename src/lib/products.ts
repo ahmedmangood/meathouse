@@ -7,7 +7,7 @@ export interface Product {
   category: string;
   image: string;
   description: string;
-  badge?: string;
+  badge: string;
 }
 
 export interface Category {
@@ -16,7 +16,7 @@ export interface Category {
   icon: React.ComponentType<{ className?: string }>;
   image: string;
   gradient: string;
-  badge: string;
+  badge?: string;
   products: Product[];
 }
 
@@ -26,6 +26,8 @@ export const allProducts: Product[] = [
     name: "الطحال",
     price: 140,
     category: "حجز مسبق",
+    badge: "حجز الآن",
+
     image: "/products/الطحال.jpg",
     description: "طحال بلدي طازج، غني بالحديد والمعادن، طعم مميز ومحبب",
   },
@@ -34,6 +36,8 @@ export const allProducts: Product[] = [
     name: "مخاصي",
     price: 349.99,
     category: "حجز مسبق",
+    badge: "حجز الآن",
+
     image: "/products/مخاصي.jpg",
     description: "مخاصي بلدي طازج، حاجة فاخرة للمحبين، جودة ممتازة",
   },
@@ -43,6 +47,7 @@ export const allProducts: Product[] = [
     price: 459.99,
     badge: "الأكثر طلباً",
     category: "حجز مسبق",
+
     image: "/products/كبدة.png",
     description:
       "تشكيلة كبدة وقلب وكلاوي بلدي طازجة، باقة متنوعة من أطيب المقبلات",
@@ -52,6 +57,8 @@ export const allProducts: Product[] = [
     name: "مخ",
     price: 219.99,
     category: "حجز مسبق",
+    badge: "حجز الآن",
+
     image: "/products/مخ.jpg",
     description: "مخ بلدي طازج ونظيف، يقدم بالطريقة التقليدية الشهية",
   },
@@ -60,6 +67,8 @@ export const allProducts: Product[] = [
     name: "لحمه راس",
     price: 339.99,
     category: "حجز مسبق",
+    badge: "حجز الآن",
+
     image: "/products/لحمة-الراس.jpg",
     description: "لحمة راس بلدي طازجة، مثالية لإعداد أشهى الوجبات التقليدية",
   },
@@ -68,6 +77,8 @@ export const allProducts: Product[] = [
     name: "كوارع",
     price: 339.99,
     category: "حجز مسبق",
+    badge: "حجز الآن",
+
     image: "/products/الكوارع.jpg",
     description: "كوارع بلدي نظيفة ومحضرة بعناية، طازجة ولذيذة",
   },
@@ -76,6 +87,8 @@ export const allProducts: Product[] = [
     name: "عكاوي",
     price: 334.99,
     category: "حجز مسبق",
+    badge: "حجز الآن",
+
     image: "/products/عكاوي.JPG",
     description: "عكاوي بلدي طازجة، مقرمشة ومقلية بعناية على النار",
   },
@@ -84,6 +97,8 @@ export const allProducts: Product[] = [
     name: "قلب وكلاوي",
     price: 344.99,
     category: "حجز مسبق",
+    badge: "حجز الآن",
+
     image: "/products/كلاوي.png",
     description: "قلب وكلاوي بلدي طازجين، من أجود المقبلات البلدي",
   },
@@ -92,6 +107,8 @@ export const allProducts: Product[] = [
     name: "كبده - بلدي صافي",
     price: 499.99,
     category: "حجز مسبق",
+    badge: "حجز الآن",
+
     image: "/products/كبدة.png",
     description: "كبده بلدي صافي طازجة، أعلى جودة ونضارة، طعم لا يُنسى",
   },
@@ -101,6 +118,7 @@ export const allProducts: Product[] = [
     name: "لحم حواوشي بلدي",
     price: 359.99,
     category: "جاهز للتسوية",
+    badge: "مميز",
     image: "/products/رغيف-حواوشى-بلدي.png",
     description: "لحم حواوشي بلدي محشو بالتوابل والبصل، جاهز للتسوية مباشرة",
   },
@@ -127,6 +145,7 @@ export const allProducts: Product[] = [
     name: "كفتة بلدي",
     price: 409.99,
     category: "جاهز للتسوية",
+    badge: "مميز",
     image: "/products/كفتة-بلدي.png",
     description: "كفتة بلدي بالبقدونس والتوابل، مثالية للشوي والقلي",
   },
@@ -135,6 +154,7 @@ export const allProducts: Product[] = [
     name: "كفتة ارز",
     price: 279.99,
     category: "جاهز للتسوية",
+    badge: "مميز",
     image: "/products/كفتة-رز.jpg",
     description: "كفتة ارز بلدي تقليدية بالأرز والتوابل، جاهزة للطبخ",
   },
@@ -143,6 +163,7 @@ export const allProducts: Product[] = [
     name: "شاورما لحمة متبلة",
     price: 434.99,
     category: "جاهز للتسوية",
+    badge: "مميز",
     image: "/products/شاورما.jpg",
     description: "شاورما لحمة متبلة بالتوابل الشرقية، جاهزة للشواء",
   },
@@ -151,6 +172,7 @@ export const allProducts: Product[] = [
     name: "برجر شيدر",
     price: 419.99,
     category: "جاهز للتسوية",
+    badge: "مميز",
     image: "/products/برجر.jpg",
     description: "برجر شيدر بلدي فاخر بالجبن، وجبة شهية لا تقاوم",
   },
@@ -159,16 +181,18 @@ export const allProducts: Product[] = [
     name: "برجر رومي",
     price: 419.99,
     category: "جاهز للتسوية",
+    badge: "مميز",
     image: "/products/برجر2.jpg",
     description: "برجر رومي خفيف ولذيذ، محضر من أجود اللحوم",
   },
   {
     id: 75,
-    name: "شاورما لحم 15%",
+    name: "قشرة",
     price: 479.99,
     category: "الكندوز",
-    image: "/products/شاورما.jpg",
-    description: "شاورما لحن 15% دهون، صحي ولذيذ، متبل بالتواصل الأصلية",
+    badge: "مميز",
+    image: "/products/صباع-قشرة-لحمة-باردة.png",
+    description: "صباع قشرة لحمة باردة، مقرمشة ولذيذة من أشهى المقبلات",
   },
   {
     id: 76,
@@ -193,6 +217,7 @@ export const allProducts: Product[] = [
     name: "عمود سن عادي 30%",
     price: 444.99,
     category: "الكندوز",
+    badge: "مميز",
     image: "/products/لحم-عمود-سن-قليل-الدسم.png",
     description: "عمود سن عادي 30% دهون، قطعة ممتازة من أفضل أنواع اللحوم",
   },
@@ -210,6 +235,7 @@ export const allProducts: Product[] = [
     name: "عمود سن أحمر 10%",
     price: 484.99,
     category: "الكندوز",
+    badge: "مميز",
     image: "/products/عمود-سن-10.jpg",
     description: "عمود سن أحمر 10% دهون، من أندر القطع وأجودها",
   },
@@ -218,6 +244,7 @@ export const allProducts: Product[] = [
     name: "كباب حلة",
     price: 459.99,
     category: "الكندوز",
+    badge: "مميز",
     image: "/products/كباب-حله.png",
     description: "كباب حلة بلدي بالتوابل، جاهز للطبخ بسهولة",
   },
@@ -235,6 +262,7 @@ export const allProducts: Product[] = [
     name: "ظهر فخدة",
     price: 474.99,
     category: "الكندوز",
+    badge: "مميز",
     image: "/products/ضهر-الفخدة.jpg",
     description: "ظهر فخدة بلدي، قطعة ممتازة طرية مثالية للشوي والطبخ",
   },
@@ -243,6 +271,7 @@ export const allProducts: Product[] = [
     name: "انتروكوت / ستيك",
     price: 479.99,
     category: "الكندوز",
+    badge: "مميز",
     image: "/products/وانتركوقت-ستيك.png",
     description:
       "انتروكوت ستيك من أجود القطع، مثالي للشوي بدرجة الحرارة المفضلة",
@@ -252,6 +281,7 @@ export const allProducts: Product[] = [
     name: "انتروكوت / قطع",
     price: 479.99,
     category: "الكندوز",
+    badge: "مميز",
     image: "/products/انتروكوت-قطع.JPG",
     description: "انتروكوت مقطع جاهز للطبخ، جودة استثنائية من بيت اللحوم",
   },
@@ -287,6 +317,7 @@ export const allProducts: Product[] = [
     name: "كولاتة",
     price: 479.99,
     category: "الكندوز",
+    badge: "مميز",
     image: "/products/كولاتة.JPG",
     description: "كولاتة بلدي لذيذة ومتبلة بالتوابل الشرقية الأصلية",
   },
@@ -295,6 +326,7 @@ export const allProducts: Product[] = [
     name: "فلتو",
     price: 499.99,
     category: "الكندوز",
+    badge: "مميز",
     image: "/products/عرق-فلتو.png",
     description: "عرق فلتو بلدي، قطعة استثنائية فاخرة جداً",
   },
@@ -303,6 +335,7 @@ export const allProducts: Product[] = [
     name: "عرق تربيانكو",
     price: 484.99,
     category: "الكندوز",
+    badge: "مميز",
     image: "/products/عرق-تربيانكو.jpg",
     description: "عرق تربيانكو فاخر، قطعة مميزة بطعم لا مثيل له",
   },
@@ -311,6 +344,7 @@ export const allProducts: Product[] = [
     name: "كتف عجالي",
     price: 479.99,
     category: "الكندوز",
+    badge: "مميز",
     image: "/products/كتف-عجالي.jpg",
     description: "كتف عجالي بلدي ممتاز، مثالي للطبخ البطيء والشوي",
   },
@@ -319,22 +353,26 @@ export const allProducts: Product[] = [
     name: "سمانه",
     price: 489.99,
     category: "الكندوز",
+    badge: "مميز",
     image: "/products/سمانة.png",
     description: "سمانه بلدي، قطعة فاخرة طرية من أجود الذبائح",
   },
   {
     id: 103,
-    name: "قشرة",
+    name: "شاورما لحم 15%",
     price: 479.99,
     category: "الكندوز",
-    image: "/products/صباع-قشرة-لحمة-باردة.png",
-    description: "صباع قشرة لحمة باردة، مقرمشة ولذيذة من أشهى المقبلات",
+    badge: "مميز",
+    image: "/products/شاورما.jpg",
+    description: "شاورما لحن 15% دهون، صحي ولذيذ، متبل بالتواصل الأصلية",
   },
   {
     id: 104,
     name: "ريش ضاني",
     price: 460,
     category: "الضاني",
+    badge: "ضاني",
+
     image: "/products/ريش.jpg",
     description:
       "لحم ريش ضاني بلدي طازج، قطعة ممتازة من أفضل أنواع اللحوم الضاني",
@@ -344,6 +382,8 @@ export const allProducts: Product[] = [
     name: "فخذة ضاني",
     price: 460,
     category: "الضاني",
+    badge: "ضاني",
+
     image: "/products/فخذة-ضاني.jpg",
     description:
       "لحم فخذة ضاني بلدي طازج، قطعة ممتازة من أفضل أنواع اللحوم الضاني",
@@ -353,6 +393,8 @@ export const allProducts: Product[] = [
     name: "كتف ضاني",
     price: 460,
     category: "الضاني",
+    badge: "ضاني",
+
     image: "/products/كتف-ضاني.jpg",
     description:
       "لحم كتف ضاني بلدي طازج، قطعة ممتازة من أفضل أنواع اللحوم الضاني",
@@ -362,6 +404,8 @@ export const allProducts: Product[] = [
     name: "رقبة ضاني",
     price: 460,
     category: "الضاني",
+    badge: "ضاني",
+
     image: "/products/رقبة-ضاني.jpg",
     description:
       "لحم رقبة ضاني بلدي طازج، قطعة ممتازة من أفضل أنواع اللحوم الضاني",
@@ -375,7 +419,6 @@ export const categories: Category[] = [
     icon: Flame,
     image: "/images/readyfor.webp",
     gradient: "from-crimson to-crimson-dark",
-    badge: "الأكثر طلباً",
     products: allProducts.filter((p) => p.category === "جاهز للتسوية"),
   },
   {
@@ -384,7 +427,6 @@ export const categories: Category[] = [
     icon: Crown,
     image: "/images/kandoz.webp",
     gradient: "from-gold to-gold-dark",
-    badge: "مميز",
     products: allProducts.filter((p) => p.category === "الكندوز"),
   },
   {
@@ -393,7 +435,6 @@ export const categories: Category[] = [
     icon: Sparkles,
     image: "/images/byorder.webp",
     gradient: "from-charcoal-lighter to-charcoal-light",
-    badge: "حجز الآن",
     products: allProducts.filter((p) => p.category === "حجز مسبق"),
   },
   {
@@ -402,7 +443,6 @@ export const categories: Category[] = [
     icon: Crown,
     image: "/images/lamb.webp",
     gradient: "from-red-700 to-red-900",
-    badge: "ضاني",
     products: allProducts.filter((p) => p.category === "الضاني"),
   },
 ];

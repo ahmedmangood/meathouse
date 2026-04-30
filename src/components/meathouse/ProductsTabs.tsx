@@ -2,25 +2,9 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  MessageCircle,
-  X,
-  Eye,
-  Tag,
-  Scale,
-  Star,
-  Truck,
-  Clock,
-} from "lucide-react";
+import { X, Eye, Tag, Scale, Star, Truck, Clock } from "lucide-react";
 import Image from "next/image";
 import { allProducts, categories, Category, Product } from "@/lib/products";
-
-const categoryImages: Record<string, string> = {
-  "جاهز للتسوية": "/images/readyfor.webp",
-  الكندوز: "/images/kandoz.webp",
-  "حجز مسبق": "/images/byorder.webp",
-  " الضاني": "/images/lamb.webp",
-};
 
 const categoryGradients: Record<string, string> = {
   "جاهز للتسوية": "from-crimson to-crimson-dark",
@@ -77,7 +61,7 @@ export default function ProductsTabs() {
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             اكتشف مجموعتنا الواسعة من اللحوم الطازجة — {allProducts.length} منتج
-            متنوع في 3 تصنيفات
+            متنوع في 4 تصنيفات
           </p>
         </motion.div>
 
@@ -233,7 +217,7 @@ function ProductCard({
   onSelect: () => void;
 }) {
   const gradClass = category.gradient;
-  const badgeText = category.badge;
+  const badgeText = product.badge;
 
   return (
     <motion.div
@@ -406,7 +390,7 @@ function ProductModal({
                 " shadow-lg"
               }
             >
-              {product.category}
+              {product.badge}
             </span>
           </div>
 
