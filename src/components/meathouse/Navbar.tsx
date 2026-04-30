@@ -87,7 +87,12 @@ export default function Navbar() {
               transition={{ delay: 0.7, duration: 0.4 }}
               className="mr-4 px-6 py-2 bg-linear-to-l from-green-500 to-green-600 text-white text-sm font-semibold rounded-full hover:shadow-lg hover:shadow-green-500/20 transition-all duration-300 flex items-center gap-2"
             >
-              <MessageCircle className="w-4 h-4" />
+              <Image
+                src="/icons/whatsapp-white.svg"
+                alt="واتساب"
+                width={20}
+                height={20}
+              />
               تواصل واتساب
             </motion.a>
           </div>

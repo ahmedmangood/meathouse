@@ -7,6 +7,7 @@ export interface Product {
   category: string;
   image: string;
   description: string;
+  badge?: string;
 }
 
 export interface Category {
@@ -25,7 +26,7 @@ export const allProducts: Product[] = [
     name: "الطحال",
     price: 140,
     category: "حجز مسبق",
-    image: "/products/dummy.png",
+    image: "/products/الطحال.jpg",
     description: "طحال بلدي طازج، غني بالحديد والمعادن، طعم مميز ومحبب",
   },
   {
@@ -40,6 +41,7 @@ export const allProducts: Product[] = [
     id: 80,
     name: "كبده+قلب وكلاوي",
     price: 459.99,
+    badge: "الأكثر طلباً",
     category: "حجز مسبق",
     image: "/products/كبدة.png",
     description:
@@ -58,7 +60,7 @@ export const allProducts: Product[] = [
     name: "لحمه راس",
     price: 339.99,
     category: "حجز مسبق",
-    image: "/products/dummy.png",
+    image: "/products/لحمة-الراس.jpg",
     description: "لحمة راس بلدي طازجة، مثالية لإعداد أشهى الوجبات التقليدية",
   },
   {
@@ -66,7 +68,7 @@ export const allProducts: Product[] = [
     name: "كوارع",
     price: 339.99,
     category: "حجز مسبق",
-    image: "/products/dummy.png",
+    image: "/products/الكوارع.jpg",
     description: "كوارع بلدي نظيفة ومحضرة بعناية، طازجة ولذيذة",
   },
   {
@@ -74,7 +76,7 @@ export const allProducts: Product[] = [
     name: "عكاوي",
     price: 334.99,
     category: "حجز مسبق",
-    image: "/products/dummy.png",
+    image: "/products/عكاوي.JPG",
     description: "عكاوي بلدي طازجة، مقرمشة ومقلية بعناية على النار",
   },
   {
@@ -106,6 +108,7 @@ export const allProducts: Product[] = [
     id: 68,
     name: "سجق شرقي",
     price: 399.99,
+    badge: "الأكثر طلباً",
     category: "جاهز للتسوية",
     image: "/products/سجق.jpg",
     description: "سجق شرقي بلدي بالتوابل الأصلية، مثالي للشوي أو القلي",
@@ -114,8 +117,9 @@ export const allProducts: Product[] = [
     id: 69,
     name: "برجر بلدي",
     price: 409.99,
+    badge: "الأكثر طلباً",
     category: "جاهز للتسوية",
-    image: "/products/برجر-بلدي.png",
+    image: "/products/برجر-بلدي.JPG",
     description: "برجر بلدي 100% لحم بقري، طازج ومحضر يدوياً بالتوابل",
   },
   {
@@ -162,7 +166,7 @@ export const allProducts: Product[] = [
     id: 75,
     name: "شاورما لحم 15%",
     price: 479.99,
-    category: "جاهز للتسوية",
+    category: "الكندوز",
     image: "/products/شاورما.jpg",
     description: "شاورما لحن 15% دهون، صحي ولذيذ، متبل بالتواصل الأصلية",
   },
@@ -170,43 +174,20 @@ export const allProducts: Product[] = [
     id: 76,
     name: "مفروم بلدي عادي 30%",
     price: 424.99,
-    category: "جاهز للتسوية",
-    image: "/products/مفروم-بلدي.png",
+    badge: "الأكثر طلباً",
+    category: "الكندوز",
+    image: "/products/مفروم-بلدي-30.JPG",
     description: "مفروم بلدي عادي 30% دهون، مثالي للكفتة والمعكرونة",
-  },
-  {
-    id: 77,
-    name: "ممبار",
-    price: 169.99,
-    category: "جاهز للتسوية",
-    image: "/products/ممبار.jpg",
-    description: "ممبار بلدي نظيف ومحضر، مقرمشه ولذيذ جداً",
   },
   {
     id: 78,
     name: "ممبار محشي",
     price: 139.99,
+    badge: "الأكثر طلباً",
     category: "جاهز للتسوية",
     image: "/products/ممبار.jpg",
     description: "ممبار محشي بالأرز والتوابل، جاهز للطبخ مباشرة",
   },
-  {
-    id: 91,
-    name: "كباب حلة",
-    price: 459.99,
-    category: "جاهز للتسوية",
-    image: "/products/كباب-حله.png",
-    description: "كباب حلة بلدي بالتوابل، جاهز للطبخ بسهولة",
-  },
-  {
-    id: 92,
-    name: "كولاتة",
-    price: 479.99,
-    category: "جاهز للتسوية",
-    image: "/products/كولاتة.jpg",
-    description: "كولاتة بلدي لذيذة ومتبلة بالتوابل الشرقية الأصلية",
-  },
-
   {
     id: 87,
     name: "عمود سن عادي 30%",
@@ -219,8 +200,9 @@ export const allProducts: Product[] = [
     id: 88,
     name: "ريش عجالي ملبس 30%",
     price: 429.99,
+    badge: "الأكثر طلباً",
     category: "الكندوز",
-    image: "/products/ريش-عجالي.png",
+    image: "/products/ريش-عجالي-ملبس.JPG",
     description: "ريش عجالي ملبس 30% دهون، قطعة فاخرة طرية ولذيذة",
   },
   {
@@ -228,15 +210,24 @@ export const allProducts: Product[] = [
     name: "عمود سن أحمر 10%",
     price: 484.99,
     category: "الكندوز",
-    image: "/products/لحم-عمود-سن-قليل-الدسم.png",
+    image: "/products/عمود-سن-10.jpg",
     description: "عمود سن أحمر 10% دهون، من أندر القطع وأجودها",
+  },
+  {
+    id: 91,
+    name: "كباب حلة",
+    price: 459.99,
+    category: "الكندوز",
+    image: "/products/كباب-حله.png",
+    description: "كباب حلة بلدي بالتوابل، جاهز للطبخ بسهولة",
   },
   {
     id: 90,
     name: "عمود سن مميز 20%",
     price: 459.99,
+    badge: "الأكثر طلباً",
     category: "الكندوز",
-    image: "/products/لحم-عمود-سن-قليل-الدسم.png",
+    image: "/products/عمود-سن-20.jpg",
     description: "عمود سن مميز 20% دهون، توازن مثالي بين النكهة والصحة",
   },
   {
@@ -244,7 +235,7 @@ export const allProducts: Product[] = [
     name: "ظهر فخدة",
     price: 474.99,
     category: "الكندوز",
-    image: "/products/ظهر-الفخدة.jpg",
+    image: "/products/ضهر-الفخدة.jpg",
     description: "ظهر فخدة بلدي، قطعة ممتازة طرية مثالية للشوي والطبخ",
   },
   {
@@ -261,13 +252,14 @@ export const allProducts: Product[] = [
     name: "انتروكوت / قطع",
     price: 479.99,
     category: "الكندوز",
-    image: "/products/وانتركوقت-ستيك.png",
+    image: "/products/انتروكوت-قطع.JPG",
     description: "انتروكوت مقطع جاهز للطبخ، جودة استثنائية من بيت اللحوم",
   },
   {
     id: 96,
     name: "موزة",
     price: 479.99,
+    badge: "الأكثر طلباً",
     category: "الكندوز",
     image: "/products/لحمة-موزة.png",
     description: "لحمة موزة بلدي، قطعة فاخرة طرية من أفضل القطع",
@@ -276,6 +268,7 @@ export const allProducts: Product[] = [
     id: 97,
     name: "بوفتيك",
     price: 489.99,
+    badge: "الأكثر طلباً",
     category: "الكندوز",
     image: "/products/بوفتيك.png",
     description: "بوفتيك بلدي ممتاز، قطعة نادرة ولذيذة جداً",
@@ -284,9 +277,18 @@ export const allProducts: Product[] = [
     id: 98,
     name: "وش فخدة",
     price: 489.99,
+    badge: "الأكثر طلباً",
     category: "الكندوز",
     image: "/products/وش-فخدة.png",
     description: "وش فخدة بلدي، من ألذ القطع وأكثرها طلباً",
+  },
+  {
+    id: 92,
+    name: "كولاتة",
+    price: 479.99,
+    category: "الكندوز",
+    image: "/products/كولاتة.JPG",
+    description: "كولاتة بلدي لذيذة ومتبلة بالتوابل الشرقية الأصلية",
   },
   {
     id: 99,
@@ -309,7 +311,7 @@ export const allProducts: Product[] = [
     name: "كتف عجالي",
     price: 479.99,
     category: "الكندوز",
-    image: "/products/dummy.png",
+    image: "/products/كتف-عجالي.jpg",
     description: "كتف عجالي بلدي ممتاز، مثالي للطبخ البطيء والشوي",
   },
   {
@@ -331,11 +333,38 @@ export const allProducts: Product[] = [
   {
     id: 104,
     name: "ريش ضاني",
-    price: 360,
+    price: 460,
     category: "الضاني",
     image: "/products/ريش.jpg",
     description:
       "لحم ريش ضاني بلدي طازج، قطعة ممتازة من أفضل أنواع اللحوم الضاني",
+  },
+  {
+    id: 105,
+    name: "فخذة ضاني",
+    price: 460,
+    category: "الضاني",
+    image: "/products/فخذة-ضاني.jpg",
+    description:
+      "لحم فخذة ضاني بلدي طازج، قطعة ممتازة من أفضل أنواع اللحوم الضاني",
+  },
+  {
+    id: 106,
+    name: "كتف ضاني",
+    price: 460,
+    category: "الضاني",
+    image: "/products/كتف-ضاني.jpg",
+    description:
+      "لحم كتف ضاني بلدي طازج، قطعة ممتازة من أفضل أنواع اللحوم الضاني",
+  },
+  {
+    id: 107,
+    name: "رقبة ضاني",
+    price: 460,
+    category: "الضاني",
+    image: "/products/رقبة-ضاني.jpg",
+    description:
+      "لحم رقبة ضاني بلدي طازج، قطعة ممتازة من أفضل أنواع اللحوم الضاني",
   },
 ];
 

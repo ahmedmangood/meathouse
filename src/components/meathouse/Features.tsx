@@ -8,19 +8,19 @@ const features = [
   {
     icon: Award,
     title: "جودة عالية",
-    description: "نختار أفضل القطع من أفضل المزارع والمناحل لضمان أعلى جودة",
+    description: "نختار أفضل القطع من أفضل المزارع لضمان أعلى جودة",
     gradient: "from-crimson to-crimson-dark",
   },
   {
     icon: Clock,
     title: "طازج يومياً",
-    description: "لحومنا تصل إليك طازجة في نفس يوم الذبح لضمان النضارة",
+    description: "لحومنا تصل إليك طازجة",
     gradient: "from-gold to-gold-dark",
   },
   {
     icon: Truck,
     title: "توصيل سريع",
-    description: "خدمة توصيل مجانية لجميع المناطق بأحدث سيارات التبريد",
+    description: "خدمة توصيل لجميع المناطق ",
     gradient: "from-crimson to-crimson-dark",
   },
   {
