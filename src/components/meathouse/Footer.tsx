@@ -2,15 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Instagram,
-  Twitter,
-  MessageCircle,
-  ChevronUp,
-} from "lucide-react";
+import { MapPin, Phone, Mail, ChevronUp } from "lucide-react";
 import Link from "next/link";
 import { socialLinks } from "./Contact";
 
@@ -22,7 +14,7 @@ const quickLinks = [
   { label: "اتصل بنا", href: "#contact" },
 ];
 
-const categoryLinks = ["جاهز للتسوية", "الكندوز", "حجز مسبق"];
+const categoryLinks = ["جاهز للتسوية", "الكندوز", "حجز مسبق", "الضاني"];
 
 export default function Footer() {
   const scrollToTop = () => {

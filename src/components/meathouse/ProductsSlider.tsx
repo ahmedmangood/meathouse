@@ -100,7 +100,7 @@ export default function ProductsSlider() {
           className="text-center mb-16"
         >
           <span className="inline-block text-gold font-semibold text-sm tracking-widest mb-4">
-            تشكيلة متنوعة
+            تشكيلة متنوعة من
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4">
             منتجاتنا{" "}

@@ -33,7 +33,7 @@ export const allProducts: Product[] = [
     name: "مخاصي",
     price: 349.99,
     category: "حجز مسبق",
-    image: "/products/dummy.png",
+    image: "/products/مخاصي.jpg",
     description: "مخاصي بلدي طازج، حاجة فاخرة للمحبين، جودة ممتازة",
   },
   {
@@ -50,7 +50,7 @@ export const allProducts: Product[] = [
     name: "مخ",
     price: 219.99,
     category: "حجز مسبق",
-    image: "/products/dummy.png",
+    image: "/products/مخ.jpg",
     description: "مخ بلدي طازج ونظيف، يقدم بالطريقة التقليدية الشهية",
   },
   {
@@ -131,7 +131,7 @@ export const allProducts: Product[] = [
     name: "كفتة ارز",
     price: 279.99,
     category: "جاهز للتسوية",
-    image: "/products/dummy.png",
+    image: "/products/كفتة-رز.jpg",
     description: "كفتة ارز بلدي تقليدية بالأرز والتوابل، جاهزة للطبخ",
   },
   {
@@ -139,7 +139,7 @@ export const allProducts: Product[] = [
     name: "شاورما لحمة متبلة",
     price: 434.99,
     category: "جاهز للتسوية",
-    image: "/products/dummy.png",
+    image: "/products/شاورما.jpg",
     description: "شاورما لحمة متبلة بالتوابل الشرقية، جاهزة للشواء",
   },
   {
@@ -147,7 +147,7 @@ export const allProducts: Product[] = [
     name: "برجر شيدر",
     price: 419.99,
     category: "جاهز للتسوية",
-    image: "/products/dummy.png",
+    image: "/products/برجر.jpg",
     description: "برجر شيدر بلدي فاخر بالجبن، وجبة شهية لا تقاوم",
   },
   {
@@ -155,7 +155,7 @@ export const allProducts: Product[] = [
     name: "برجر رومي",
     price: 419.99,
     category: "جاهز للتسوية",
-    image: "/products/dummy.png",
+    image: "/products/برجر2.jpg",
     description: "برجر رومي خفيف ولذيذ، محضر من أجود اللحوم",
   },
   {
@@ -163,7 +163,7 @@ export const allProducts: Product[] = [
     name: "شاورما لحم 15%",
     price: 479.99,
     category: "جاهز للتسوية",
-    image: "/products/dummy.png",
+    image: "/products/شاورما.jpg",
     description: "شاورما لحن 15% دهون، صحي ولذيذ، متبل بالتواصل الأصلية",
   },
   {
@@ -179,7 +179,7 @@ export const allProducts: Product[] = [
     name: "ممبار",
     price: 169.99,
     category: "جاهز للتسوية",
-    image: "/products/dummy.png",
+    image: "/products/ممبار.jpg",
     description: "ممبار بلدي نظيف ومحضر، مقرمشه ولذيذ جداً",
   },
   {
@@ -187,7 +187,7 @@ export const allProducts: Product[] = [
     name: "ممبار محشي",
     price: 139.99,
     category: "جاهز للتسوية",
-    image: "/products/dummy.png",
+    image: "/products/ممبار.jpg",
     description: "ممبار محشي بالأرز والتوابل، جاهز للطبخ مباشرة",
   },
   {
@@ -195,7 +195,7 @@ export const allProducts: Product[] = [
     name: "كباب حلة",
     price: 459.99,
     category: "جاهز للتسوية",
-    image: "/products/dummy.png",
+    image: "/products/كباب-حله.png",
     description: "كباب حلة بلدي بالتوابل، جاهز للطبخ بسهولة",
   },
   {
@@ -203,7 +203,7 @@ export const allProducts: Product[] = [
     name: "كولاتة",
     price: 479.99,
     category: "جاهز للتسوية",
-    image: "/products/dummy.png",
+    image: "/products/كولاتة.jpg",
     description: "كولاتة بلدي لذيذة ومتبلة بالتوابل الشرقية الأصلية",
   },
 
@@ -298,11 +298,11 @@ export const allProducts: Product[] = [
   },
   {
     id: 100,
-    name: "عرق ترياناكو",
+    name: "عرق تربيانكو",
     price: 484.99,
     category: "الكندوز",
-    image: "/products/dummy.png",
-    description: "عرق ترياناكو فاخر، قطعة مميزة بطعم لا مثيل له",
+    image: "/products/عرق-تربيانكو.jpg",
+    description: "عرق تربيانكو فاخر، قطعة مميزة بطعم لا مثيل له",
   },
   {
     id: 101,
@@ -330,11 +330,12 @@ export const allProducts: Product[] = [
   },
   {
     id: 104,
-    name: "لحم ضاني",
+    name: "ريش ضاني",
     price: 360,
     category: "الضاني",
-    image: "/products/لحمة-باردة.png",
-    description: "لحم ضاني بلدي طازج، قطعة ممتازة من أفضل أنواع اللحوم الضاني",
+    image: "/products/ريش.jpg",
+    description:
+      "لحم ريش ضاني بلدي طازج، قطعة ممتازة من أفضل أنواع اللحوم الضاني",
   },
 ];
 

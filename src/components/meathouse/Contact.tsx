@@ -17,18 +17,21 @@ const contactInfo = [
   {
     icon: Phone,
     title: "الهاتف",
+    dirction: "tel:01556600033",
     details: "20-155-660-0033",
     lines: ["واتساب: +201556600033"],
   },
   {
     icon: Clock,
     title: "ساعات العمل",
+    dirction: "#",
     details: "يومياً من 8 صباحاً",
     lines: ["حتى 11 مساءً"],
   },
   {
     icon: Mail,
     title: "البريد الإلكتروني",
+    dirction: "mailto:info@meathouse.shop",
     details: "info@meathouse.shop",
     lines: ["للاستفسارات والطلبات"],
   },

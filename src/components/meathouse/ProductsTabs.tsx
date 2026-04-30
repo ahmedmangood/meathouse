@@ -67,7 +67,7 @@ export default function ProductsTabs() {
           className="text-center mb-12"
         >
           <span className="inline-block text-gold font-semibold text-sm tracking-widest mb-4">
-            تشكيلة متنوعة
+            تشكيلة متنوعة من
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4">
             منتجاتنا{" "}
@@ -485,7 +485,7 @@ function ProductModal({
                 ملاحظة التوصيل
               </p>
               <p className="text-xs text-gray-400 leading-relaxed">
-                يتم تجهيز الطلب في نفس اليوم. التوصيل خلال 2-4 ساعات داخل محافظة
+                يتم تجهيز الطلب في نفس اليوم. التوصيل خلال 45 دقيقة داخل مدينة
                 الفيوم. للحصول على أفضل جودة، يرجى الطلب مبكراً.
               </p>
             </div>
