@@ -34,7 +34,7 @@ export const allProducts: Product[] = [
   {
     id: 79,
     name: "مخاصي",
-    price: 349.99,
+    price: 34.99,
     category: "حجز مسبق",
     badge: "حجز الآن",
 
@@ -65,7 +65,7 @@ export const allProducts: Product[] = [
   {
     id: 82,
     name: "لحمه راس",
-    price: 339.99,
+    price: 229.99,
     category: "حجز مسبق",
     badge: "حجز الآن",
 
@@ -75,7 +75,7 @@ export const allProducts: Product[] = [
   {
     id: 83,
     name: "كوارع",
-    price: 339.99,
+    price: 239.99,
     category: "حجز مسبق",
     badge: "حجز الآن",
 
@@ -85,7 +85,7 @@ export const allProducts: Product[] = [
   {
     id: 84,
     name: "عكاوي",
-    price: 334.99,
+    price: 324.99,
     category: "حجز مسبق",
     badge: "حجز الآن",
 
@@ -369,7 +369,7 @@ export const allProducts: Product[] = [
   {
     id: 104,
     name: "ريش ضاني",
-    price: 460,
+    price: 474.99,
     category: "الضاني",
     badge: "ضاني",
 
@@ -380,7 +380,7 @@ export const allProducts: Product[] = [
   {
     id: 105,
     name: "فخذة ضاني",
-    price: 460,
+    price: 484.99,
     category: "الضاني",
     badge: "ضاني",
 
@@ -391,7 +391,7 @@ export const allProducts: Product[] = [
   {
     id: 106,
     name: "كتف ضاني",
-    price: 460,
+    price: 474.99,
     category: "الضاني",
     badge: "ضاني",
 
@@ -402,7 +402,7 @@ export const allProducts: Product[] = [
   {
     id: 107,
     name: "رقبة ضاني",
-    price: 460,
+    price: 474.99,
     category: "الضاني",
     badge: "ضاني",
 
